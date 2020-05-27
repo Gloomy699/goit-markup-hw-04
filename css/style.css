@@ -46,6 +46,10 @@ body {
   text-decoration: none;
 }
 
+.soc-link {
+  display: flex;
+}
+
 /* оформляет заголовки секций */
 .title {
   text-align: center;
@@ -260,23 +264,31 @@ img {
 }
 
 .page-advantages .item::before {
-  display: inline-flex;
+  display: block;
   content: "";
-  width: 270px;
   height: 120px;
   margin-bottom: 30px;
   background-color: #f5f4fa;
-}
-
-/* .page-advantages .item:nth-child(2) {
-  width: 70px;
-  height: 70px;
-  background-image: url(../image/clock.svg);
-
-  background-size: contain;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
-} */
+}
+
+.icon-antena::before {
+  background-image: url(../image/antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../image/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../image/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../image/astronaut.svg);
+}
 
 .page-advantages .adv-title {
   font-weight: 700;
@@ -310,14 +322,23 @@ img {
   margin-right: 30px;
 }
 
+.page-scils .photo {
+  height: 294px;
+  border-radius: 4px;
+}
+
 .page-scils > .title {
   margin-bottom: 50px;
 }
 
 .page-scils .description {
-  background-color: var(--background-color-dark-grey);
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
   color: var(--white-text-color);
   text-align: center;
+  border-radius: 0px 0px 4px 4px;
 
   font-weight: 700;
   font-size: 14px;
@@ -326,7 +347,7 @@ img {
   padding-top: 27px;
   padding-bottom: 27px;
 
-  margin-top: 0;
+  margin-top: -70px;
   margin-bottom: 0;
 }
 
@@ -339,6 +360,8 @@ img {
 }
 .page-team .photo {
   margin-bottom: 30px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
 }
 
 .page-team .title {
@@ -346,6 +369,9 @@ img {
 }
 .team-list > .item {
   background-color: var(--white-text-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+
   border-radius: 4px;
   padding-bottom: 24px;
 
@@ -366,6 +392,7 @@ img {
   margin-top: 0;
   margin-bottom: 10px;
 }
+
 .page-team .text {
   color: var(--secondary-text-color);
 
@@ -379,18 +406,42 @@ img {
   margin-top: 0px;
 }
 
+.soc-link {
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+.soc-link > .item:not(:last-child) {
+  width: calc((100% - 3 * 10px) / 4);
+  margin-right: 10px;
+}
 .soc-link .link {
-  color: var(--secondary-text-color);
+  display: block;
+  content: "";
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.link-instagram {
+  background-image: url(../image/instagram.svg);
+}
+.link-twitter {
+  background-image: url(../image/twitter.svg);
+}
+.link-facebook {
+  background-image: url(../image/facebook.svg);
+}
+.link-linkedin {
+  background-image: url(../image/linkedin.svg);
 }
 
 .team-list .link:hover,
 .team-list .link:focus {
   background-color: var(--accent-color);
-  color: var(--white-text-color);
-}
-
-.soc-link > .item:not(:last-child) {
-  margin-right: 2px;
 }
 
 /* оформляет клиентов */
@@ -479,7 +530,7 @@ img {
 .social-link .join-in {
   text-transform: uppercase;
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 21px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -487,20 +538,15 @@ img {
 
   color: #ffffff;
 }
-
-.soc-link {
-  display: flex;
+.footer-page .soc-link {
+  padding: 0;
+}
+.footer-page .link {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.social-link .link {
-  color: #ffffff;
-}
-.social-link .item + .item {
-  margin-left: 11px;
-}
-
-.social-link .link:hover,
-.social-link .link:focus {
+.footer-page .link:hover,
+.footer-page .link:focus {
   background-color: var(--accent-color);
 }
 
@@ -514,11 +560,23 @@ img {
   color: var(--white-text-color);
 }
 .subscription .button {
+  display: flex;
+  align-items: flex-end;
   font-weight: 900;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 46px;
-  padding-right: 45px;
+  padding-left: 29px;
+  padding-right: 28px;
+}
+.subscription .button::after {
+  content: "";
+  width: 24px;
+  height: 30px;
+  margin-left: 10px;
+  background-image: url(../image/send.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position-y: 45%;
 }
 
 .dev-team {
