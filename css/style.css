@@ -91,15 +91,12 @@ img {
 
 /* оформляет хедер */
 
-.page-header > .container {
-  display: flex;
-  margin-bottom: 0px;
-}
+.page-header > .container,
 .page-header .main-nav,
 .page-header .nav-list,
 .page-header .contact-list {
   display: flex;
-  align-items: center;
+  margin-bottom: 0px;
 }
 
 /* оформляет логотип */
@@ -155,9 +152,8 @@ img {
 
 .page-header .contact {
   color: var(--secondary-text-color);
-
   display: inline-block;
-
+  align-items: baseline;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -167,35 +163,17 @@ img {
   font-size: 14px;
   line-height: 1.14px;
 }
+.icon-contact {
+  fill: currentColor;
+  margin-right: 10px;
+  padding-top: 2px;
+}
+
 .page-header .contact:hover,
 .page-header .contact:focus {
   color: var(--accent-color);
 }
-.page-header .mail::before {
-  content: "";
-  display: inline-flex;
 
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
-  background-image: url(../image/envelope.svg);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
-}
-
-.page-header .phone::before {
-  content: "";
-  display: inline-flex;
-
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  background-image: url(../image/smartphone.svg);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
-}
 /* оформлет основной банер (фон добавлен чтоб было видно слова белого цвета) */
 
 .hero {
@@ -215,22 +193,22 @@ img {
   background-position: center;
   background-size: cover;
   text-align: center;
-  padding-top: 0px;
+  padding-top: 200px;
   padding-bottom: 0px;
 }
 .hero .container {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  /* padding-top: 200px; */
 }
 .hero .title {
   display: block;
-
   color: var(--white-text-color);
+
   margin-bottom: 46px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .hero .button {
@@ -263,22 +241,18 @@ img {
   margin-right: 0;
 }
 
-.page-advantages .item::before {
-  display: block;
-  content: "";
+.icon-advantage {
+  width: 270px;
   height: 120px;
   margin-bottom: 30px;
   background-color: #f5f4fa;
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
-.icon-antena::before {
+/* .icon-antena::before {
   background-image: url(../image/antenna.svg);
-}
+} */
 
-.icon-clock::before {
+/* .icon-clock::before {
   background-image: url(../image/clock.svg);
 }
 
@@ -288,7 +262,7 @@ img {
 
 .icon-astronaut::before {
   background-image: url(../image/astronaut.svg);
-}
+} */
 
 .page-advantages .adv-title {
   font-weight: 700;
