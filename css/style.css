@@ -152,8 +152,8 @@ img {
 
 .page-header .contact {
   color: var(--secondary-text-color);
-  display: inline-block;
-  align-items: baseline;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -196,9 +196,7 @@ img {
   padding-top: 200px;
   padding-bottom: 0px;
 }
-.hero .container {
-  /* padding-top: 200px; */
-}
+
 .hero .title {
   display: block;
   color: var(--white-text-color);
@@ -374,33 +372,23 @@ img {
   width: calc((100% - 3 * 10px) / 4);
   margin-right: 10px;
 }
-.soc-link .link {
-  display: block;
-  content: "";
+
+.page-team .link {
+  display: flex;
   width: 44px;
   height: 44px;
+  background-color: var(--white-text-color);
   border-radius: 50%;
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-text-color);
 }
-
-.link-instagram {
-  background-image: url(../image/instagram.svg);
-}
-.link-twitter {
-  background-image: url(../image/twitter.svg);
-}
-.link-facebook {
-  background-image: url(../image/facebook.svg);
-}
-.link-linkedin {
-  background-image: url(../image/linkedin.svg);
-}
-
-.team-list .link:hover,
-.team-list .link:focus {
+.page-team .link:hover {
   background-color: var(--accent-color);
+  color: var(--white-text-color);
+}
+.icon-link {
+  fill: currentColor;
 }
 
 /* оформляет клиентов */
@@ -409,24 +397,27 @@ img {
 }
 
 .page-clients .item {
+  display: flex;
   width: calc((100% - 5 * 30px) / 6);
+  height: 90px;
   justify-content: center;
-
-  padding-top: 21px;
-  padding-left: 65px;
-  padding-bottom: 21px;
-  padding-right: 65px;
-
+  align-items: center;
   border: 1px solid var(--secondary-text-color);
   border-radius: 4px;
+  color: var(--secondary-text-color);
 }
 .page-clients .item:not(:last-child) {
   margin-right: 30px;
 }
 
+.icon-company {
+  fill: currentColor;
+}
+
 .page-clients .item:hover,
 .page-clients .item:focus {
-  border: 1px solid var(--accent-color);
+  border-color: solid var(--accent-color);
+  color: var(--accent-color);
 }
 
 .page-clients .title {
@@ -501,7 +492,14 @@ img {
   padding: 0;
 }
 .footer-page .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white-text-color);
 }
 
 .footer-page .link:hover,
@@ -520,22 +518,16 @@ img {
 }
 .subscription .button {
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   font-weight: 900;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 29px;
   padding-right: 28px;
 }
-.subscription .button::after {
-  content: "";
-  width: 24px;
-  height: 30px;
+.icon-send {
   margin-left: 10px;
-  background-image: url(../image/send.svg);
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position-y: 45%;
 }
 
 .dev-team {
