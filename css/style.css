@@ -397,27 +397,28 @@ img {
 }
 
 .page-clients .item {
-  display: flex;
   width: calc((100% - 5 * 30px) / 6);
-  height: 90px;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid var(--secondary-text-color);
-  border-radius: 4px;
-  color: var(--secondary-text-color);
 }
 .page-clients .item:not(:last-child) {
   margin-right: 30px;
 }
+.link-company {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  border: 1px solid var(--secondary-text-color);
+  border-radius: 4px;
+  color: var(--secondary-text-color);
+}
+
+.page-clients .link-company:hover {
+  border-color: solid var(--accent-color);
+  color: var(--accent-color);
+}
 
 .icon-company {
   fill: currentColor;
-}
-
-.page-clients .item:hover,
-.page-clients .item:focus {
-  border-color: solid var(--accent-color);
-  color: var(--accent-color);
 }
 
 .page-clients .title {
