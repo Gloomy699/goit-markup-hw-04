@@ -1,7 +1,8 @@
 :root {
-  --primary-text-color: #212121;
-  --secondary-text-color: #757575;
-  --white-text-color: #ffffff;
+  --primary-icon-color: #afb1b8;
+  --primary-color: #212121;
+  --secondary-color: #757575;
+  --white-color: #ffffff;
   --accent-color: #2196f3;
   --background-color-dark-grey: rgba(47, 48, 58, 0.8);
 }
@@ -11,13 +12,13 @@
 /*белый цвет текса #FFFFFF*/
 /*акцент #2196F3*/
 /*цвет фона #2196F3*/
-/* добавил цвет фона везде где основной цвет БЕЛЫЙ */
+/*основной цвет иконок #AFB1B8*/
 
 /*оформление главной страницы*/
 
 body {
   background-color: #ffffff;
-  color: var(--primary-text-color);
+  color: var(--primary-color);
   letter-spacing: 0.03em;
   font-family: Roboto, sans-serif;
 }
@@ -69,7 +70,7 @@ body {
 /* основные стили кнопки */
 .button {
   background-color: var(--accent-color);
-  color: var(--white-text-color);
+  color: var(--white-color);
 
   display: inline-block;
   vertical-align: middle;
@@ -106,7 +107,7 @@ img {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
-  color: var(--primary-text-color);
+  color: var(--primary-color);
 
   margin-right: 80px;
   padding-top: 24px;
@@ -122,7 +123,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  color: var(--primary-text-color);
+  color: var(--primary-color);
 
   letter-spacing: 0.02em;
   font-weight: 500;
@@ -151,7 +152,7 @@ img {
 }
 
 .page-header .contact {
-  color: var(--secondary-text-color);
+  color: var(--secondary-color);
   display: flex;
   align-items: center;
   padding-top: 32px;
@@ -181,7 +182,7 @@ img {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--secondary-text-color);
+  background-color: var(--secondary-color);
 
   background-image: linear-gradient(
       to right,
@@ -199,7 +200,7 @@ img {
 
 .hero .title {
   display: block;
-  color: var(--white-text-color);
+  color: var(--white-color);
 
   margin-bottom: 46px;
   font-weight: 900;
@@ -257,7 +258,7 @@ img {
   margin-bottom: 10px;
 }
 .page-advantages .description {
-  color: var(--secondary-text-color);
+  color: var(--secondary-color);
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -293,7 +294,7 @@ img {
   width: 370px;
   height: 70px;
   background: rgba(47, 48, 58, 0.8);
-  color: var(--white-text-color);
+  color: var(--white-color);
   text-align: center;
   border-radius: 0px 0px 4px 4px;
 
@@ -325,7 +326,7 @@ img {
   margin-bottom: 50px;
 }
 .team-list > .item {
-  background-color: var(--white-text-color);
+  background-color: var(--white-color);
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
 
@@ -350,8 +351,8 @@ img {
   margin-bottom: 10px;
 }
 
-.page-team .text {
-  color: var(--secondary-text-color);
+.page-team .tech-scill {
+  color: var(--secondary-color);
 
   text-align: center;
 
@@ -377,15 +378,15 @@ img {
   display: flex;
   width: 44px;
   height: 44px;
-  background-color: var(--white-text-color);
+  /* background-color: var(--white-color); */
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  color: var(--secondary-text-color);
+  color: var(--primary-icon-color);
 }
 .page-team .link:hover {
   background-color: var(--accent-color);
-  color: var(--white-text-color);
+  color: var(--white-color);
 }
 .icon-link {
   fill: currentColor;
@@ -407,9 +408,9 @@ img {
   justify-content: center;
   align-items: center;
   height: 90px;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--primary-icon-color);
   border-radius: 4px;
-  color: #afb1b8;
+  color: var(--primary-icon-color);
 }
 
 .page-clients .link-company:hover {
@@ -440,7 +441,7 @@ img {
 
 /* оформляет адрес*/
 .address .site-logo {
-  color: var(--white-text-color);
+  color: var(--white-color);
   font-size: 22px;
   display: block;
   margin-bottom: 10px;
@@ -450,7 +451,7 @@ img {
 }
 
 .address .city-adr {
-  color: var(--white-text-color);
+  color: var(--white-color);
 
   display: block;
   font-style: normal;
@@ -487,7 +488,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.03em;
 
-  color: #ffffff;
+  color: var(--white-color);
 }
 .footer-page .soc-link {
   padding: 0;
@@ -500,7 +501,7 @@ img {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  color: var(--white-text-color);
+  color: var(--white-color);
 }
 
 .footer-page .link:hover,
@@ -515,7 +516,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.03em;
 
-  color: var(--white-text-color);
+  color: var(--white-color);
 }
 .subscription .button {
   display: flex;
@@ -573,7 +574,7 @@ img {
   justify-content: center;
 }
 .filter-button {
-  color: var(--primary-text-color);
+  color: var(--primary-color);
   background-color: #f5f4fa;
 
   display: inline-block;
@@ -597,7 +598,7 @@ img {
 
 .filter-button:hover,
 .filter-button:focus {
-  color: var(--white-text-color);
+  color: var(--white-color);
   background-color: var(--accent-color);
 }
 
@@ -644,7 +645,7 @@ img {
   margin-bottom: 4px;
   margin-top: 0;
 
-  color: var(--primary-text-color);
+  color: var(--primary-color);
 
   font-weight: 700;
   font-size: 18px;
@@ -663,7 +664,7 @@ img {
   margin-top: 0;
   margin-bottom: 0;
 
-  color: var(--secondary-text-color);
+  color: var(--secondary-color);
 }
 
 .text {
@@ -676,7 +677,7 @@ img {
   width: 370px;
   height: 294px;
 
-  color: var(--white-text-color);
+  color: var(--white-color);
   background-color: rgba(33, 150, 243, 0.9);
   border-radius: 5px 5px 0px 0px;
 
