@@ -407,9 +407,9 @@ img {
   justify-content: center;
   align-items: center;
   height: 90px;
-  border: 1px solid var(--secondary-text-color);
+  border: 1px solid #afb1b8;
   border-radius: 4px;
-  color: var(--secondary-text-color);
+  color: #afb1b8;
 }
 
 .page-clients .link-company:hover {
