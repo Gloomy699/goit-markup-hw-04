@@ -119,9 +119,10 @@ img {
 
 /* оформляет навигацию */
 .page-header .link {
+  position: relative;
   display: inline-block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 33px;
+  padding-bottom: 33px;
 
   color: var(--primary-color);
 
@@ -129,14 +130,28 @@ img {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+}
 
-  border-bottom: 2px solid transparent;
+.page-header .link::after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  display: block;
+  bottom: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  background-size: auto;
+  border-radius: 2px;
 }
-.page-header .link:hover,
-.page-header .link:focus {
-  color: var(--accent-color);
-  border-bottom: 2px solid var(--accent-color);
+
+.page-header .link:hover::after {
+  opacity: 1;
 }
+/* .page-header .link:active::after {
+  opacity: 1;
+} */
 
 .main-nav .item:not(:last-child) {
   margin-right: 52px;
@@ -173,6 +188,7 @@ img {
 .page-header .contact:hover,
 .page-header .contact:focus {
   color: var(--accent-color);
+  transition: 500ms;
 }
 
 /* оформлет основной банер (фон добавлен чтоб было видно слова белого цвета) */
@@ -274,6 +290,7 @@ img {
 }
 
 .page-scils .item {
+  position: relative;
   width: calc((100% - 2 * 30px) / 3);
 }
 .page-scils .item:not(:last-child) {
@@ -291,8 +308,8 @@ img {
 
 .page-scils .description {
   position: absolute;
-  width: 370px;
-  height: 70px;
+  bottom: 0;
+  width: 100%;
   background: rgba(47, 48, 58, 0.8);
   color: var(--white-color);
   text-align: center;
@@ -304,9 +321,7 @@ img {
 
   padding-top: 27px;
   padding-bottom: 27px;
-
-  margin-top: -70px;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 /* оформлет секцию команда */
@@ -597,6 +612,9 @@ img {
 
 .filter-button:hover,
 .filter-button:focus {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
   color: var(--white-color);
   background-color: var(--accent-color);
 }
@@ -609,6 +627,7 @@ img {
 }
 
 .page-portfolio .item {
+  position: relative;
   width: calc((100% - 2 * 30px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
@@ -669,25 +688,27 @@ img {
 
 .text {
   position: absolute;
-  z-index: -1;
-  padding: 63px 24px 63px 24px;
+  top: 0;
+  opacity: 0;
 
+  padding: 63px 24px 63px 24px;
   align-items: center;
-  width: 370px;
+  width: 100%;
   height: 294px;
 
+  background-color: rgba(33, 149, 243, 0.9);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 0;
+  margin: 0;
+
   color: var(--white-color);
-  background-color: rgba(33, 149, 243, 0);
-  border-radius: 5px;
-
-  margin-top: -404px;
-
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
 }
 .page-portfolio .item:hover .text {
-  background-color: rgba(33, 149, 243, 0.9);
-  z-index: 1;
+  transition: 300ms;
+  opacity: 1;
 }
